@@ -1,0 +1,363 @@
+/* Student Assessment App - Component-specific Global Styles */
+
+/* ========== LAYOUT STYLES ========== */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .content-wrapper {
+    flex: 1;
+    margin-left: 240px;
+    padding: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .content-wrapper.sidebar-collapsed {
+    margin-left: 64px;
+  }
+  
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e3e6f0;
+  }
+  
+  .page-title {
+    color: #4e73df;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .page-actions {
+    display: flex;
+    gap: 12px;
+  }
+  
+  /* ========== DASHBOARD COMPONENTS ========== */
+  .dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .stat-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .stat-card-title {
+    color: #5a5c69;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .stat-card-value {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  .stat-card-description {
+    color: #858796;
+    font-size: 14px;
+  }
+  
+  .stat-card-footer {
+    display: flex;
+    align-items: center;
+    color: #858796;
+    font-size: 12px;
+    margin-top: 12px;
+  }
+  
+  /* Stat card colors */
+  .stat-card.primary {
+    border-left: 4px solid #4e73df;
+  }
+  .stat-card.success {
+    border-left: 4px solid #1cc88a;
+  }
+  .stat-card.warning {
+    border-left: 4px solid #f6c23e;
+  }
+  .stat-card.danger {
+    border-left: 4px solid #e74a3b;
+  }
+  .stat-card.info {
+    border-left: 4px solid #36b9cc;
+  }
+  
+  /* ========== STUDENT PROFILE STYLES ========== */
+  .student-profile {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #4e73df;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .profile-details {
+    flex: 1;
+  }
+  
+  .profile-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  .profile-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .info-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-label {
+    color: #858796;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .info-value {
+    font-size: 16px;
+    margin-top: 4px;
+  }
+  
+  /* ========== QUESTIONNAIRE STYLES ========== */
+  .question-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+  }
+  
+  .question-text {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #4e73df;
+  }
+  
+  .question-description {
+    color: #858796;
+    margin-bottom: 24px;
+  }
+  
+  .options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .option-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #e3e6f0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .option-item:hover {
+    background-color: #f8f9fc;
+    border-color: #d1d3e2;
+  }
+  
+  .option-item.selected {
+    background-color: #e8f0fe;
+    border-color: #4e73df;
+  }
+  
+  .option-text {
+    margin-left: 12px;
+  }
+  
+  .questionnaire-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+  
+  /* ========== SIDEBAR CUSTOM STYLES ========== */
+  .sidebar-brand {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    background-color: #3a5dc5;
+  }
+  
+  .sidebar-brand-icon {
+    margin-right: 0.5rem;
+  }
+  
+  .sidebar-brand-text {
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  
+  .sidebar-divider {
+    margin: 0 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  
+  .sidebar-heading {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .nav-item {
+    position: relative;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+  }
+  
+  .nav-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-link.active {
+    color: white;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-icon {
+    margin-right: 0.5rem;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* ========== LOGIN PAGE STYLES ========== */
+  .login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+  }
+  
+  .login-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 24px;
+  }
+  
+  .login-form {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+  }
+  
+  .login-logo {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .login-heading {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  
+  .login-title {
+    color: #4e73df;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .login-subtitle {
+    color: #858796;
+    margin-top: 8px;
+  }
+  
+  .form-footer {
+    text-align: center;
+    margin-top: 24px;
+  }
+  
+  .form-footer a {
+    color: #4e73df;
+    font-weight: 500;
+  }
+  
+  /* ========== RESPONSIVE STYLES ========== */
+  @media (max-width: 768px) {
+    .content-wrapper {
+      margin-left: 0;
+      padding: 16px;
+    }
+  
+    .content-wrapper.sidebar-collapsed {
+      margin-left: 0;
+    }
+  
+    .dashboard-stats {
+      grid-template-columns: 1fr;
+    }
+  
+    .student-profile {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .profile-info {
+      grid-template-columns: 1fr;
+    }
+  }
